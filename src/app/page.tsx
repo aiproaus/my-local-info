@@ -37,9 +37,13 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="flex items-center gap-2 text-xs font-semibold bg-[#FAF1E6] text-[#A35C4E] px-3 py-1.5 rounded-full border border-[#EDE0D4]">
-            <span className="w-2 h-2 rounded-full bg-[#FF7E67] animate-pulse"></span>
-            업데이트: {lastUpdated}
+          <div className="flex flex-wrap items-center gap-6 text-sm font-bold text-[#A35C4E]">
+            <Link href="/" className="text-[#FF7E67] border-b-2 border-[#FF7E67] pb-0.5">홈</Link>
+            <Link href="/blog" className="hover:text-[#FF7E67] transition-colors">블로그</Link>
+            <div className="flex items-center gap-2 text-xs font-semibold bg-[#FAF1E6] text-[#A35C4E] px-3 py-1.5 rounded-full border border-[#EDE0D4]">
+              <span className="w-2 h-2 rounded-full bg-[#FF7E67] animate-pulse"></span>
+              업데이트: {lastUpdated}
+            </div>
           </div>
         </div>
       </header>
@@ -106,7 +110,7 @@ export default function Home() {
                   </div>
                   
                   <Link 
-                    href={`/info/${event.id}`}
+                    href="/blog"
                     className="block text-center text-xs font-bold bg-[#FAF1E6] hover:bg-[#FF7E67] hover:text-white text-[#A35C4E] py-2.5 px-4 rounded-xl transition-all duration-200 mt-4"
                   >
                     자세히 보기 &rarr;
@@ -161,7 +165,7 @@ export default function Home() {
                   </div>
                   
                   <Link 
-                    href={`/info/${benefit.id}`}
+                    href="/blog"
                     className="block text-center text-xs font-bold bg-[#FAF1E6] hover:bg-[#5F8D4E] hover:text-white text-[#A35C4E] py-2.5 px-4 rounded-xl transition-all duration-200 mt-4"
                   >
                     지원금 알아보기 &rarr;
